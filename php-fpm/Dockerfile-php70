@@ -1,7 +1,7 @@
 FROM centos/systemd
 
 ENV ACCEPT_EULA Y
-ENV PHP_VERSION php56
+ENV PHP_VERSION php70
 
 ADD https://packages.microsoft.com/config/rhel/7/prod.repo /etc/yum.repos.d/mssql-release.repo
 
@@ -31,6 +31,7 @@ mhash,\
 xsl,\
 pear,\
 soap,\
+sqlsrv,\
 tidy,\
 pecl-uuid,\
 pecl-zip,\

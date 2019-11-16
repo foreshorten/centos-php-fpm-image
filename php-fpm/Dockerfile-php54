@@ -31,7 +31,6 @@ mhash,\
 xsl,\
 pear,\
 soap,\
-sqlsrv,\
 tidy,\
 pecl-uuid,\
 pecl-zip,\
@@ -43,7 +42,7 @@ RUN yum clean all
 RUN ln -s /opt/remi/$PHP_VERSION/root/usr/bin/php /usr/bin/php && \
 ln -s /opt/remi/$PHP_VERSION/root/usr/sbin/php-fpm /usr/bin/php-fpm
 
-RUN sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/opt/remi/$PHP_VERSION/php-fpm.d/www.conf
+RUN sed -i -e 's/127.0.0.1/0.0.0.0/g' /opt/remi/$PHP_VERSION/root/etc/php-fpm.d/www.conf
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" && \
