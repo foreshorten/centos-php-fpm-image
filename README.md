@@ -6,6 +6,7 @@ This is a CentOS 7 image with php-fpm installed and running on port 9000.   It i
 There are currently 6 Tags/builds of php54, php56, php70, php72, php73 and php74, each has the following php modules installed: 
 **NOTE:** php-sqlsrv not installed in php54 or php56
  - fpm 
+ - cli 
  - gd 
  - intl 
  - ldap 
