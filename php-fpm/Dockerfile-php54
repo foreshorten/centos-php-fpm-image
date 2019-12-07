@@ -1,8 +1,7 @@
-ARG PHP_VERSION=php54
 FROM centos/systemd
 
 ENV ACCEPT_EULA Y
-#ENV PHP_VERSION php54
+ENV PHP_VERSION php54
 
 ADD https://packages.microsoft.com/config/rhel/7/prod.repo /etc/yum.repos.d/mssql-release.repo
 
